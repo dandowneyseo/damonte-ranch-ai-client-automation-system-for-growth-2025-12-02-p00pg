@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Damonte Ranch AI Client Automation System - Automate your lead flow and get daily leads without buying ads. Powered by Claude AI.">
+    <meta name="keywords" content="AI automation, lead generation, client acquisition, Damonte Ranch">
+    <meta name="author" content="Damonte Ranch">
+    <meta name="theme-color" content="#1a1a1a">
+    <title>Damonte Ranch AI Client Automation System For Growth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        :root {
+            --color-primary: #5B4BFF;
+            --color-secondary: #EEF0FF;
+            --color-accent: #00E5A8;
+        }
+        
+        body {
+            background-color: #0f0f0f;
+            color: #ffffff;
+        }
+        
+        .text-primary {
+            color: var(--color-primary);
+        }
+        
+        .bg-primary {
+            background-color: var(--color-primary);
+        }
+        
+        .text-accent {
+            color: var(--color-accent);
+        }
+        
+        .bg-accent {
+            background-color: var(--color-accent);
+        }
+        
+        .gradient-primary {
+            background: linear-gradient(135deg, #5B4BFF 0%, #8B7FFF 100%);
+        }
+        
+        .gradient-accent {
+            background: linear-gradient(135deg, #00E5A8 0%, #00D99F 100%);
+        }
+        
+        .card-hover {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(91, 75, 255, 0.15);
+        }
+        
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .btn-primary:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(91, 75, 255, 0.3);
+        }
+        
+        .btn-accent {
+            background-color: var(--color-accent);
+            color: #0f0f0f;
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .btn-accent:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 229, 168, 0.3);
+        }
+        
+        .faq-answer {
+            transition: all 300ms ease-out;
+            max-height: 500px;
+            overflow: hidden;
+        }
+        
+        .faq-answer.hidden {
+            max-height: 0;
+            opacity: 0;
+        }
+        
+        .faq-icon {
+            transition: transform 300ms ease-out;
+        }
+        
+        .faq-icon.rotate-180 {
+            transform: rotate(180deg);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(91, 75, 255, 0.1) 0%, rgba(0, 229, 168, 0.05) 100%);
+        }
+        
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(91, 75, 255, 0.2) 0%, rgba(0, 229, 168, 0.1) 100%);
+            border-radius: 12px;
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="smooth-scroll bg-gray-950 text-white">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-gray-950 bg-opacity-95 backdrop-blur-md border-b border-gray-800">
+        <nav class="max-w-7xl mx-auto px-8 md:px-16 py-6 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center font-bold text-white text-lg">
+                    DR
+                </div>
+                <span class="text-xl font-bold text-white hidden sm:inline">Damonte Ranch</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8 lg:gap-12">
+                <a href="#features" class="text-gray-300 hover:text-primary transition-colors duration-300 font-medium">Features</a>
+                <a href="#benefits" class="text-gray-300 hover:text-primary transition-colors duration-300 font-medium">Benefits</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-primary transition-colors duration-300 font-medium">Testimonials</a>
+                <a href="#faq" class="text-gray-300 hover:text-primary transition-colors duration-300 font-medium">FAQ</a>
+            </div>
+
+            <!-- Desktop CTA Button -->
+            <div class="hidden md:block">
+                <a href="https://calendly.com/dandowneyseo/30min" class="btn-primary px-8 py-3 rounded-full font-semibold text-white inline-flex items-center gap-2">
+                    Book a Demo
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button md:hidden text-white text-2xl focus:outline-none focus:ring-2 focus:ring-primary rounded-lg p-2 transition-all duration-300">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-gray-900 border-t border-gray-800 px-8 py-6 space-y-4">
+            <a href="#features" class="block text-gray-300 hover:text-primary transition-colors duration-300 font-medium py-2">Features</a>
+            <a href="#benefits" class="block text-gray-300 hover:text-primary transition-colors duration-300 font-medium py-2">Benefits</a>
+            <a href="#testimonials" class="block text-gray-300 hover:text-primary transition-colors duration-300 font-medium py-2">Testimonials</a>
+            <a href="#faq" class="block text-gray-300 hover:text-primary transition-colors duration-300 font-medium py-2">FAQ</a>
+            <a href="https://calendly.com/dandowneyseo/30min" class="btn-primary px-8 py-3 rounded-full font-semibold text-white inline-flex items-center gap-2 w-full justify-center mt-4">
+                Book a Demo
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-32 md:py-40 lg:py-48 relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-10 left-10 w-72 h-72 bg-primary opacity-5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent opacity-5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-8 md:px-16 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
+                <!-- Left Content -->
+                <div class="space-y-8 lg:space-y-10">
+                    <div class="space-y-4">
+                        <div class="inline-flex items-center gap-3 bg-gray-900 border border-gray-800 rounded-full px-4 py-2">
+                            <span class="w-2 h-2 bg-accent rounded-full"></span>
+                            <span class="text-sm font-semibold text-accent">Powered by Claude AI</span>
+                        </div>
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
+                            Damonte Ranch <span class="text-primary">AI Client Automation</span> System For Growth
+                        </h1>
+                    </div>
+                    <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl">
+                        Transform your business with intelligent automation. Automate Damonte Ranch lead flow and generate daily qualified leads without spending money on traditional advertising. Our AI-powered system works 24/7 to fill your pipeline.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="https://calendly.com/dandowneyseo/30min" class="btn-primary px-8 py-4 rounded-full font-bold text-lg inline-flex items-center justify-center gap-2 transition-all duration-300">
+                            Start Your Free Consultation
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                        <a href="mailto:dandowneyseo@gmail.com" class="px-8 py-4 rounded-full font-bold text-lg border-2 border-primary text-primary inline-flex items-center justify-center gap-2 hover:bg-primary hover:text-white transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="relative hidden lg:block">
+                    <div class="relative w-full h-96 bg-gradient-to-br from-primary to-accent rounded-3xl opacity-10 blur-2xl"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center space-y-6">
+                            <div class="inline-flex items-center justify-center w-24 h-24 bg-primary rounded-2xl">
+                                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="text-2xl font-bold text-white">AI-Powered</p>
+                                <p class="text-gray-300">Automated Lead Generation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-20 md:mt-32 pt-20 md:pt-32 border-t border-gray-800">
+                <div class="space-y-2">
+                    <p class="text-3xl md:text-4xl font-bold text-primary">24/7</p>
+                    <p class="text-gray-400 font-medium">Automated Outreach</p>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-3xl md:text-4xl font-bold text-accent">0 Ad Spend</p>
+                    <p class="text-gray-400 font-medium">Required</p>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-3xl md:text-4xl font-bold text-primary">Daily</p>
+                    <p class="text-gray-400 font-medium">Qualified Leads</p>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-3xl md:text-4xl font-bold text-accent">100% AI</p>
+                    <p class="text-gray-400 font-medium">Powered</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 md:py-32 bg-gray-900 relative">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="text-center space-y-4 mb-16 md:mb-24">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+                    Damonte Ranch <span class="text-primary">Automated Client Acquisition</span>
+                </h2>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto">
+                    Leverage cutting-edge AI technology to automate every step of your client acquisition process. Our intelligent system identifies, engages, and converts prospects while you focus on serving your clients.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+                <!-- Feature 1 -->
+                <div class="card-hover bg-gray-800 border border-gray-700 rounded-2xl p-8 md:p-10 space-y-6">
+                    <div class="feature-icon">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">Intelligent Lead Identification</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Our advanced AI algorithms analyze market data and identify high-quality prospects that match your ideal client profile. Get access to a steady stream of pre-qualified leads tailored specifically to your business needs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card-hover bg-gray-800 border border-gray-700 rounded-2xl p-8 md:p-10 space-y-6">
+                    <div class="feature-icon">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">Personalized Outreach Automation</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Engage prospects with personalized, contextual messages that feel human and authentic. Our AI crafts compelling outreach sequences that drive engagement and build genuine relationships at scale.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card-hover bg-gray-800 border border-gray-700 rounded-2xl p-8 md:p-10 space-y-6">
+                    <div class="feature-icon">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">Real-Time Performance Analytics</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Monitor your lead generation performance with comprehensive dashboards and real-time analytics. Track conversion rates, engagement metrics, and ROI to continuously optimize your acquisition strategy.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="card-hover bg-gray-800 border border-gray-700 rounded-2xl p-8 md:p-10 space-y-6">
+                    <div class="feature-icon">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">Enterprise-Grade Security</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Your data is protected with industry-leading encryption and compliance standards. We maintain GDPR, CCPA, and other regulatory compliance to ensure your business operates safely and legally.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="card-hover bg-gray-800 border border-gray-700 rounded-2xl p-8 md:p-10 space-y-6">
+                    <div class="feature-icon">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">Multi-Channel Integration</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Reach prospects across email, LinkedIn, SMS, and social media from a single unified platform. Coordinate your messaging across channels for maximum impact and consistent brand presence.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="card-hover bg-gray-800 border border-gray-700 rounded-2xl p-8 md:p-10 space-y-6">
+                    <div class="feature-icon">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">Continuous AI Learning</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Our system learns from every interaction and improves over time. The more you use it, the smarter it becomes at identifying ideal prospects and crafting effective outreach messages.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 md:py-32 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl -mr-48"></div>
+
+        <div class="max-w-7xl mx-auto px-8 md:px-16 relative z-10">
+            <div class="text-center space-y-4 mb-16 md:mb-24">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+                    Why Choose <span class="text-accent">Damonte Ranch AI</span>?
+                </h2>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto">
+                    Stop wasting money on ads that don't convert. Get daily leads without buying ads and watch your business grow exponentially.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 lg:gap-20">
+                <!-- Benefit 1 -->
+                <div class="flex gap-6 md:gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-14 w-14 rounded-xl bg-gradient-to-br from-primary to-accent">
+                            <svg class="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">Zero Ad Spend Required</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Eliminate expensive PPC campaigns and traditional advertising. Our AI automation generates qualified leads organically through intelligent prospecting and relationship building, saving you thousands monthly while delivering superior results.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="flex gap-6 md:gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-14 w-14 rounded-xl bg-gradient-to-br from-accent to-primary">
+                            <svg class="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">24/7 Automated Lead Generation</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Your system works around the clock, even while you sleep. Daily leads flow into your pipeline automatically, maintaining consistent growth without requiring manual intervention or constant monitoring.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="flex gap-6 md:gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-14 w-14 rounded-xl bg-gradient-to-br from-primary to-accent">
+                            <svg class="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">Massive Cost Savings</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Reduce customer acquisition costs by up to 70%. Our efficient AI-driven approach delivers more qualified leads at a fraction of traditional marketing costs, dramatically improving your ROI and profitability.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="flex gap-6 md:gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-14 w-14 rounded-xl bg-gradient-to-br from-accent to-primary">
+                            <svg class="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">Personalized at Scale</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Every prospect receives customized, relevant messaging that speaks to their specific needs and pain points. Our AI crafts human-quality communications that build genuine connections and drive higher conversion rates.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div class="flex gap-6 md:gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-14 w-14 rounded-xl bg-gradient-to-br from-primary to-accent">
+                            <svg class="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">Proven Results</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Our clients consistently see 3-5x improvements in lead quality and 2-4x increases in conversion rates. Real businesses in Damonte Ranch and beyond are using our system to scale rapidly and predictably.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 6 -->
+                <div class="flex gap-6 md:gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center justify-center h-14 w-14 rounded-xl bg-gradient-to-br from-accent to-primary">
+                            <svg class="h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-bold text-white">Easy Integration</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Seamlessly connect with your existing CRM, email platform, and business tools. Our system integrates with all major platforms, so you can start generating leads within minutes without complex setup or technical expertise.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with Background Image -->
+    <section class="py-20 md:py-32 relative overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop'); background-size: cover; background-position: center;">
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950 to-gray-900 opacity-85"></div>
+
+        <div class="max-w-4xl mx-auto px-8 md:px-16 relative z-10 text-center space-y-8">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+                Ready to Transform Your <span class="text-accent">Lead Generation</span>?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                Join forward-thinking businesses in Damonte Ranch who are already generating daily qualified leads without spending money on ads. Start your free consultation today and discover how much you could be earning.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <a href="https://calendly.com/dandowneyseo/30min" class="btn-primary px-10 py-4 rounded-full font-bold text-lg inline-flex items-center justify-center gap-2">
+                    Book Free Consultation
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+                <a href="mailto:dandowneyseo@gmail.com" class="px-10 py-4 rounded-full font-bold text-lg border-2 border-white text-white hover:bg-white hover:text-gray-950 transition-all duration-300 inline-flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    Email Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 md:py-32 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="text-center space-y-4 mb-16 md:mb-24">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+                    What Our <span class="text-primary">Clients Say</span>
+                </h2>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto">
+                    Real success stories from businesses using Damonte Ranch AI Automation System to transform their lead generation and grow their revenue.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+                <!-- Testimonial 1 -->
+                <div class="card-hover bg-gray-800 border border-gray-700 rounded-2xl p-8 space-y-4">
+                    <div class="flex gap-1">
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        "This system completely transformed our lead generation. We went from spending $3,000 monthly on ads to getting consistent daily leads with zero ad spend. Our conversion rate improved dramatically."
+                    </p>
+                    <div class="pt-4 border-t border-gray-700">
+                        <p class="font-bold text-white">Marcus Thompson</p>
+                        <p class="text-sm text-gray-400">Sales Director, Thompson Consulting</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="card-hover bg-gray-800 border border-gray-700 rounded-2xl p-8 space-y-4">
+                    <div class="flex gap-1">
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        "The personalization is incredible. Prospects actually respond to our outreach because it feels genuine. We've tripled our qualified leads in just three months."
+                    </p>
+                    <div class="pt-4 border-t border-gray-700">
+                        <p class="font-bold text-white">Sarah Mitchell</p>
+                        <p class="text-sm text-gray-400">Business Development Manager, Growth Partners</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="card-hover bg-gray-800 border border-gray-700 rounded-2xl p-8 space-y-4">
+                    <div class="flex gap-1">
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        "The ROI is unmatched. We're now closing deals that we never would have found with traditional methods. This is a game-changer for our entire organization."
+                    </p>
+                    <div class="pt-4 border-t border-gray-700">
+                        <p class="font-bold text-white">David Chen</p>
+                        <p class="text-sm text-gray-400">CEO, Digital Innovations Inc.</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="card-hover bg-gray-800 border border-gray-700 rounded-2xl p-8 space-y-4">
+                    <div class="flex gap-1">
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        "Implementing this system was the best decision we made this year. Our sales team now focuses on closing deals instead of hunting for leads. Efficiency and revenue both increased significantly."
+                    </p>
+                    <div class="pt-4 border-t border-gray-700">
+                        <p class="font-bold text-white">Jennifer Lopez</p>
+                        <p class="text-sm text-gray-400">VP of Sales, Enterprise Solutions LLC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-20 md:py-32 relative overflow-hidden">
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent opacity-5 rounded-full blur-3xl -mb-48 -ml-48"></div>
+
+        <div class="max-w-4xl mx-auto px-8 md:px-16 relative z-10">
+            <div class="text-center space-y-4 mb-12 md:mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+                    About <span class="text-primary">Damonte Ranch</span>
+                </h2>
+            </div>
+
+            <div class="space-y-8 md:space-y-10">
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    Damonte Ranch AI Client Automation System was founded with a simple but powerful mission: to revolutionize how businesses generate leads in the modern era. We recognized that traditional marketing approaches were becoming increasingly expensive and ineffective, while AI technology was advancing rapidly. Our team of experts combined deep marketing knowledge with cutting-edge artificial intelligence to create a system that automates the entire lead generation process. We've spent years perfecting our algorithms and refining our approach to ensure our clients get the best possible results. Today, we're proud to serve hundreds of businesses across various industries, all of whom have experienced transformative growth through our platform.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    Our core values drive everything we do: innovation, integrity, and impact. We believe that businesses should have access to world-class lead generation technology regardless of their size or budget. That's why we've built a system that's both powerful and accessible, delivering enterprise-level results at a fraction of traditional costs. We're committed to continuous improvement, constantly learning from our clients' successes and challenges to make our platform better. Our team is dedicated to your success, providing exceptional support and strategic guidance to help you maximize your ROI. When you partner with Damonte Ranch, you're not just getting a tool—you're gaining a partner committed to your growth and profitability.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 md:py-32 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-8 md:px-16">
+            <div class="text-center space-y-4 mb-16 md:mb-24">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
+                    Frequently Asked <span class="text-primary">Questions</span>
+                </h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                    Get answers to common questions about our AI Client Automation System and how it can transform your business.
+                </p>
+            </div>
+
+            <div class="space-y-4 md:space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full px-8 md:px-10 py-6 md:py-8 flex items-center justify-between text-left hover:bg-gray-750 transition-colors duration-300 cursor-pointer group">
+                        <span class="text-lg md:text-xl font-bold text-white group-hover:text-primary transition-colors duration-300">How quickly will I start seeing results?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-8 md:px-10 pb-6 md:pb-8">
+                        <p class="text-gray-400 leading-relaxed">
+                            Most of our clients start seeing their first qualified leads within 5-7 days of setup. However, the real magic happens over the first 30 days as the AI learns your ideal customer profile and refines its targeting. By day 90, most clients report 3-5x increases in lead volume and quality compared to their previous methods. The exact timeline depends on your industry, target market, and how well you've defined your ideal customer profile. We provide detailed onboarding to ensure you're set up for success from day one.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full px-8 md:px-10 py-6 md:py-8 flex items-center justify-between text-left hover:bg-gray-750 transition-colors duration-300 cursor-pointer group">
+                        <span class="text-lg md:text-xl font-bold text-white group-hover:text-primary transition-colors duration-300">Do I really need zero ad spend?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-8 md:px-10 pb-6 md:pb-8">
+                        <p class="text-gray-400 leading-relaxed">
+                            Yes, absolutely. Our system generates leads through intelligent prospecting, personalized outreach, and relationship building—not paid advertising. You'll never pay per click, impression, or lead. The only cost is our platform subscription. That said, some clients choose to invest in paid ads alongside our system to accelerate growth, but it's completely optional. Many of our most successful clients use only our organic lead generation system and achieve remarkable results without any ad spend whatsoever. The choice is entirely yours based on your growth goals and budget.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full px-8 md:px-10 py-6 md:py-8 flex items-center justify-between text-left hover:bg-gray-750 transition-colors duration-300 cursor-pointer group">
+                        <span class="text-lg md:text-xl font-bold text-white group-hover:text-primary transition-colors duration-300">What industries does this work for?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-8 md:px-10 pb-6 md:pb-8">
+                        <p class="text-gray-400 leading-relaxed">
+                            Our system works across virtually every B2B industry including consulting, professional services, software, real estate, financial services, healthcare, manufacturing, and many more. We've successfully helped businesses in over 50 different industries generate qualified leads. The AI is flexible enough to adapt to different sales cycles, price points, and customer acquisition strategies. Whether you're selling high-ticket enterprise solutions or mid-market services, our system can be customized to your specific needs. We recommend scheduling a consultation to discuss your specific industry and goals—we'll be honest about whether our system is the right fit for you.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full px-8 md:px-10 py-6 md:py-8 flex items-center justify-between text-left hover:bg-gray-750 transition-colors duration-300 cursor-pointer group">
+                        <span class="text-lg md:text-xl font-bold text-white group-hover:text-primary transition-colors duration-300">How does the AI ensure lead quality?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-8 md:px-10 pb-6 md:pb-8">
+                        <p class="text-gray-400 leading-relaxed">
+                            Our AI uses multiple layers of qualification to ensure every lead meets your criteria. It analyzes company size, industry, role, buying signals, and engagement patterns to identify prospects most likely to convert. The system learns from your feedback on which leads converted and which didn't, continuously improving its targeting accuracy. We also use real-time data validation to verify contact information and company details. Most importantly, our AI personalizes every outreach based on the prospect's specific situation, which dramatically improves response rates and lead quality. You'll receive fewer leads overall but with significantly higher conversion rates.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden">
+                    <button class="faq-question w-full px-8 md:px-10 py-6 md:py-8 flex items-center justify-between text-left hover:bg-gray-750 transition-colors duration-300 cursor-pointer group">
+                        <span class="text-lg md:text-xl font-bold text-white group-hover:text-primary transition-colors duration-300">What kind of support do you provide?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-8 md:px-10 pb-6 md:pb-8">
+                        <p class="text-gray-400 leading-relaxed">
+                            We provide comprehensive support including initial onboarding, strategy consultation, ongoing optimization, and dedicated account management. Our team works with you to define your ideal customer profile, set up your campaigns, and continuously monitor performance. We provide weekly insights and recommendations to help you maximize results. You'll have access to detailed analytics dashboards, training resources, and direct support via email and phone. We also conduct regular strategy reviews to ensure the system is aligned with your business goals and evolving needs. Your success is our success, and we're committed to helping you achieve your growth objectives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-8 md:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-16 mb-12 md:mb-16">
+                <!-- Brand Column -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center font-bold text-white text-lg">
+                            DR
+                        </div>
+                        <span class="text-lg font-bold text-white">Damonte Ranch</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        AI-powered client automation system for modern businesses. Generate daily leads without ad spend.
+                    </p>
+                    <div class="flex gap-4 pt-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-primary hover:bg-gray-700 transition-all duration-300">
+                            <i class="fab fa-linkedin text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-primary hover:bg-gray-700 transition-all duration-300">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-primary hover:bg-gray-700 transition-all duration-300">
+                            <i class="fab fa-facebook text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Column -->
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold text-lg">Product</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">Features</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">Benefits</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">Testimonials</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Column -->
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold text-lg">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">About Us</a></li>
+                        <li><a href="mailto:dandowneyseo@gmail.com" class="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">Contact</a></li>
+                        <li><a href="https://calendly.com/dandowneyseo/30min" class="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">Book a Demo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold text-lg">Get In Touch</h4>
+                    <div class="space-y-3">
+                        <a href="mailto:dandowneyseo@gmail.com" class="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors duration-300 text-sm">
+                            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            dandowneyseo@gmail.com
+                        </a>
+                        <a href="https://calendly.com/dandowneyseo/30min" class="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors duration-300 text-sm">
+                            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            Schedule a Call
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 pt-8 md:pt-12">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <p class="text-gray-500 text-sm text-center md:text-left">
+                        &copy; 2025 Damonte Ranch AI Client Automation System. All rights reserved.
+                    </p>
+                    <p class="text-gray-500 text-sm">
+                        Powered by Claude AI Technology
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        const isOpen = !answer.classList.contains('hidden');
+                        
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                            }
+                        });
+                        
+                        // Toggle current item
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
